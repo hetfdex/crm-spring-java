@@ -1,5 +1,4 @@
 package com.hetfdex.crm.dao;
 
-public class CustomerDAO {
-
+public interface CustomerDAO {
 }
