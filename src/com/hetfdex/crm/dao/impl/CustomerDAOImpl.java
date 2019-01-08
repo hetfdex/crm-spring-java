@@ -1,5 +1,6 @@
 package com.hetfdex.crm.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -21,10 +22,20 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Override
 	@Transactional
 	public List<Customer> getCustomers() {
-		Session session = sessionFactory.getCurrentSession();
+		//Session session = sessionFactory.getCurrentSession();
 
-		Query<Customer> query = session.createQuery("from Customer", Customer.class);
+		//Query<Customer> query = session.createQuery("from Customer", Customer.class);
+		
+		Customer c1 = new Customer("Jose", "Pereira", "jose@email.com");
+		Customer c2 = new Customer("Maria", "Rocha", "maria@email.com");
+		
+		List<Customer> customers = new ArrayList<Customer>();
+		
+		customers.add(c1);
+		customers.add(c2);
+		
+		return customers;
 
-		return query.getResultList();
+		//return query.getResultList();
 	}
 }

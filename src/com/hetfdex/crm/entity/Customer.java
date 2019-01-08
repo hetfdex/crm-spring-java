@@ -59,6 +59,15 @@ public class Customer implements Serializable {
 		this.email = email;
 	}
 
+	public Customer() {
+	}
+
+	public Customer(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
