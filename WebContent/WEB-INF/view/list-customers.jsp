@@ -38,15 +38,20 @@
 					<th scope="col">First Name</th>
 					<th scope="col">Last Name</th>
 					<th scope="col">Email</th>
+					<th scope="col">Action</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<c:forEach var="customer" items="${customers}">
+						<c:url var="updateCustomer" value="/customer/update">
+							<c:param name="customerID" value="${customer.id}" />
+						</c:url>
 						<tr>
 							<td>${customer.firstName}</td>
 							<td>${customer.lastName}</td>
 							<td>${customer.email}</td>
+							<td><a href="${updateCustomer}">Update</a></td>
 						</tr>
 					</c:forEach>
 				</tr>
