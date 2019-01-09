@@ -28,6 +28,10 @@
 	</div>
 
 	<div class="container">
+		<button type="button" class="btn btn-primary"
+			onClick="window.location.href = 'add'; return false;">Add
+			Customer</button>
+		<p></p>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
