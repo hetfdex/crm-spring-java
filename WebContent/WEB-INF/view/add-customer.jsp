@@ -29,15 +29,18 @@
 		<form action="save" modelAttribute="customer" method="POST">
 			<div class="form-group">
 				<label for="firstName">First Name</label> <input type="text"
-					class="form-control" id="firstName" placeholder="Enter first name">
+					class="form-control" id="firstName" name="firstName"
+					placeholder="Enter first name">
 			</div>
 			<div class="form-group">
 				<label for="lastName">Last Name</label> <input type="text"
-					class="form-control" id="lastName" placeholder="Enter last name">
+					class="form-control" id="lastName" name="lastName"
+					placeholder="Enter last name">
 			</div>
 			<div class="form-group">
-				<label for="email">Email</label> <input type="email"
-					class="form-control" id="email" placeholder="Enter email address">
+				<label for="email">Email</label> <input type="text"
+					class="form-control" id="email" name="email"
+					placeholder="Enter email address">
 			</div>
 			<button type="submit" class="btn btn-primary">Submit</button>
 			<a href="${pageContext.request.contextPath}/customer/list"
